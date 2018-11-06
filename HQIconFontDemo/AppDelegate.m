@@ -2,11 +2,16 @@
 //  AppDelegate.m
 //  HQIconFontDemo
 //
-//  Created by 君凯商联网 on 2018/9/8.
-//  Copyright © 2018年 君凯商联网. All rights reserved.
+//  Created by Mr_Han on 2018/9/8.
+//  Copyright © 2018年 Mr_Han. All rights reserved.
+//  CSDN <https://blog.csdn.net/u010960265>
+//  GitHub <https://github.com/HanQiGod>
 //
 
 #import "AppDelegate.h"
+#import "TBCityIconFont.h"
+#import "ViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -17,6 +22,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [TBCityIconFont setFontName:@"iconfont"];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
